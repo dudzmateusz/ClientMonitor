@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>firstApp</class>
+ <widget class="QMainWindow" name="firstApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>200</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>simpleApp</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;URW Gothic&quot;;
+color: black;</string>
+       </property>
+       <attribute name="title">
+        <string>Baza Danych SQLite</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;URW Gothic&quot;;
+padding: 15px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="styleSheet">
+           <string notr="true">
+QHeaderView::section { background-color:lightgreen ; height:50px;}
+alternate-background-color: rgb(181, 131, 90);
+
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+ border-radius: 25pt;
+  width: 100%;
+border-color: white;
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+th {
+padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::DotLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Imię</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nazwisko</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Pesel</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ID pacjenta</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Płeć</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Wiek</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Waga</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Wzrost</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Wyszukiwarka pacjentów</string>
+       </attribute>
+       <widget class="QComboBox" name="filtr_pacjenci">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>10</y>
+          <width>481</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 11pt &quot;Yrsa&quot;;
+background: lightyellow;
+color: blue;
+padding: 5px;
+
+</string>
+        </property>
+        <property name="currentText">
+         <string/>
+        </property>
+        <property name="maxCount">
+         <number>5</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>12</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>Wybierz filtr</string>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>400</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 0.5rem;
+color:blue;</string>
+        </property>
+        <property name="locale">
+         <locale language="Polish" country="Poland"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>200</number>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Szukaj...</string>
+        </property>
+        <property name="cursorMoveStyle">
+         <enum>Qt::LogicalMoveStyle</enum>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>96</y>
+          <width>937</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QHeaderView::section { background-color:lightgreen ; height:50px;}
+alternate-background-color: rgb(181, 131, 90);
+
+font: 11pt &quot;Ubuntu&quot;;
+  border-collapse: collapse;
+ border-radius: 25pt;
+border-color: white;
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+th {
+padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: coral;}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::DotLine</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Imię</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nazwisko</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Pesel</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ID pacjenta</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Płeć</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Wiek</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Waga</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Wzrost</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="badania">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>285</y>
+          <width>401</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QHeaderView::section { background-color:lightgreen ; height:20px;}
+alternate-background-color: rgb(181, 131, 90);
+ font: 9pt &quot;Ubuntu&quot;;
+  border-collapse: collapse;
+ border-radius: 25pt;
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+th {
+padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}</string>
+        </property>
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>ID Pacjent</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Termin</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ID Lekarz</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Opis</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>260</y>
+          <width>184</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Zaplanowane wizyty badań</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pacjent</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="lekarze">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>280</y>
+          <width>501</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QHeaderView::section { background-color:lightgreen ; height:20px;}
+alternate-background-color: rgb(181, 131, 90);
+ font: 9pt &quot;Ubuntu&quot;;
+  border-collapse: collapse;
+ border-radius: 25pt;
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+th {
+padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}</string>
+        </property>
+        <property name="showGrid">
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>Identyfikator</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Imie</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nazwisko</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Telefon</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Pokój</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Godziny pracy</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Dostępność</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Urlop</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>260</y>
+          <width>45</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lekarz</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>977</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
